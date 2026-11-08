@@ -237,9 +237,6 @@
         <button class="modal-close" id="modal-close" aria-label="Close">×</button>
         <h3 id="modal-title"></h3>
         <div class="summary-body" id="modal-body"></div>
-        <div class="links">
-          <a href="#" id="modal-demo">Live demo →</a>
-          <a href="#" id="modal-repo">GitHub repo →</a>
         </div>
         <div class="tags" id="modal-tags" style="margin-top:1.25rem"></div>
       </div>
@@ -257,7 +254,6 @@
             <p><strong>Approach.</strong> How you tackled it: the stack you chose, key decisions, and any trade-offs. This is where you show your thinking, not just the result. You have room here — 250 to 500 words reads comfortably in this panel.</p>
             <p><strong>Outcome.</strong> What you shipped, what worked well, and what you'd do differently. Mention any measurable result if you have one.</p>
           `,
-          
         },
         p2: {
           title: "Project Two — your second best",
@@ -267,7 +263,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p3: {
           title: "Project Three — your third best",
@@ -277,7 +272,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p4: {
           title: "Project Four — your fourth highlight",
@@ -287,7 +281,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p5: {
           title: "Project Five",
@@ -297,7 +290,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p6: {
           title: "Project Six",
@@ -307,7 +299,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p7: {
           title: "Project Seven",
@@ -317,7 +308,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         p8: {
           title: "Project Eight",
@@ -327,7 +317,6 @@
             <p><strong>Approach.</strong> Your process, decisions, and trade-offs.</p>
             <p><strong>Outcome.</strong> What shipped, what you learned, what you'd improve.</p>
           `,
-          demo: "#", repo: "#"
         },
         o1: {
           title: "Other project one",
@@ -336,7 +325,6 @@
             <p><strong>Approach.</strong> Your process and any interesting constraints.</p>
             <p><strong>Outcome.</strong> What shipped and what you took away from it.</p>
           `,
-          demo: "#", repo: "#"
         },
         o2: {
           title: "Other project two",
@@ -345,7 +333,6 @@
             <p><strong>Approach.</strong> Your process and any interesting constraints.</p>
             <p><strong>Outcome.</strong> What shipped and what you took away from it.</p>
           `,
-          demo: "#", repo: "#"
         }
       };
 
@@ -367,8 +354,6 @@
       const overlay = document.getElementById("modal-overlay");
       const titleEl = document.getElementById("modal-title");
       const bodyEl = document.getElementById("modal-body");
-      const demoEl = document.getElementById("modal-demo");
-      const repoEl = document.getElementById("modal-repo");
       const tagsEl = document.getElementById("modal-tags");
 
       function openModal(id) {
@@ -376,8 +361,6 @@
         if (!p) return;
         titleEl.textContent = p.title;
         bodyEl.innerHTML = p.body;
-        demoEl.href = p.demo;
-        repoEl.href = p.repo;
         tagsEl.innerHTML = (TAGS[id] || [])
           .map(([cat, label]) => `<span class="tag ${cat}">${label}</span>`)
           .join("");
