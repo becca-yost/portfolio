@@ -406,3 +406,14 @@
     </script>
   </body>
 </html>
+
+<script>
+  // ... the PROJECTS object and openModal/closeModal code ...
+
+  function openFromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && PROJECTS[id]) openModal(id);
+  }
+  window.addEventListener("hashchange", openFromHash);
+  openFromHash();
+</script>
