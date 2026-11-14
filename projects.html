@@ -112,6 +112,10 @@
       .intro p { color: var(--muted); font-size: 0.98rem; }
       .intro p + p { margin-top: 0.6rem; }
       @media (min-width: 720px) { .feature .thumb { width: 240px; } }
+      .visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
     </style>
   </head>
   <body>
@@ -142,7 +146,11 @@
             Professional work lives in <strong>other projects</strong> at the bottom.
             Tags mark each project's <em>sector</em>, the <em>skills</em> it used, and its <em>context</em>.
           </p>
-         <p> <a href="docs/RebeccaYost-Executive-Summary.pdf">Read the full executive summary →</a></p>
+         <p> 
+         <a href="docs/RebeccaYost-Executive-Summary.pdf" target="_blank" rel="noopener">
+  Read the full executive summary →
+  <span class="visually-hidden"> (opens in a new tab)</span>
+</a></p>
         </div>
       </div>
     </section>
